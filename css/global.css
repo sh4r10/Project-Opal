@@ -1,0 +1,50 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+body, html{
+  height: 100%;
+}
+
+body{
+  background: #fafafa;
+  color: #282828;
+  font-family: "Roboto", sans-serif;
+}
+
+.grid-container{
+  display: grid;
+  height: 100%;
+  grid-template-columns: 0.5fr 1fr 1fr 0.5fr 1fr 0.5fr;
+  grid-template-rows: 1fr 1fr 2fr 2fr 2fr 0.5fr;
+  grid-template-areas: "header header header . . ."
+                        ". today today . yday ."
+                        ". weather time . todo ."
+                        ". news news . todo ."
+                        ". news news . todo ."
+                        ". . quote quote . .";
+
+}
+
+.header-container{
+  grid-area: header;
+  display: flex;
+  align-items: center;
+  margin-left: 51px;
+  margin-top: 40px;
+}
+
+.logo{
+  width: 80px;
+  grid-area: news;
+}
+
+.title{
+  font-size: 4em;
+  font-weight: 300;
+  grid-area: title;
+  margin-left: 40px;
+}
