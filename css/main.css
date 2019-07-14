@@ -118,3 +118,44 @@
   position: absolute;
   bottom: 0;
 }
+
+.time-display{
+  z-index: 99;
+  position: absolute;
+  margin-top: 1rem;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.time-display h3{
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.time-header{
+  display: flex;
+  align-items: center;
+  padding: 0.3rem;
+  margin-top: 0.3rem;
+}
+
+.time-heading{
+  margin-left: 0.5rem;
+}
+
+.time-icon{
+  color: var(--highlight);
+  font-size: 2rem;
+}
+
+.time .date{
+  font-size: 1rem;
+}
+
+.time .day{
+  font-size: 0.8rem;
+}
