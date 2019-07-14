@@ -40,9 +40,9 @@ body{
 
 }
 
-@media only screen and (max-width: 768px){
+@media only screen and (max-width: 769px){
   :root{
-    font-size: 10px;
+    font-size: 12px;
     transition: .2s;
   }
 }
