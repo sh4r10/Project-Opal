@@ -4,16 +4,52 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.css">
+
   <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/main.css">
   <title>Project Opal</title>
 </head>
 <body>
   <div class="grid-container">
-    <div class="header-container">
-      <img class="logo" src="resources/img/logo.svg">
-      <h1 class="title">Project Opal</h1>
-    </div>
+      <div class="header-container">
+        <img class="logo" src="resources/img/logo.svg">
+        <h1 class="title">Project Opal</h1>
+      </div>
+      <div class="today">
+        <h2>Today</h2>
+      </div>
+
+      <div class="weather">
+        <div class="weather-header">
+          <i class="weather-icon material-icons">wb_sunny</i>
+          <div class="weather-heading">
+            <h4 class="location"><span class="city">Malmo</span>, <span class="country">Sweden</span></h4>
+            <p class="last-refreshed">Just now</p>
+          </div>
+          <i class="refresh-icon material-icons">refresh</i>
+        </div>
+        <div class="weather-display">
+          <h3><span class="degrees">14°</span></h3>
+          <p class="description">Partially Cloudy</p>
+        </div>
+        <img src="resources/img/skyline.svg" alt="" class="weather-background">
+      </div>
+
+      <div class="time">
+        <div class="time-header">
+          <i class="material-icons">access_time</i>
+          <h4>25th February</h4>
+          <p>Monday, Week 8</p>
+        </div>
+        <div class="time-display">
+          <h3 class="thetime">14:30</h3>
+        </div>
+        <img src="resources/img/tree.svg" alt="" class="time-background">
+      </div>
   </div>
 </body>
 </html>
