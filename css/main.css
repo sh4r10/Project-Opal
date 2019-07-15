@@ -311,7 +311,6 @@
   height: 27rem;
   position: relative;
   overflow: scroll;
-  transition: 0.2s;
   border-radius: 4px;
 }
 
@@ -385,11 +384,43 @@
   transition: .2s;
 }
 
-.source:hover{
+.source:hover, .source:hover>i{
   color: #338a3e;
 }
 
 .source i{
+  color: var(--primary);
   font-size: 1rem;
   margin-left: 0.1rem;
+}
+
+.quote{
+  grid-area: quote;
+  width: 100%;
+  text-align: center;
+}
+
+.quote-text{
+  font-size: 1rem;
+  color: var(--primary-text);
+  font-weight: 300;
+  font-style: italic;
+}
+
+.quote-text i{
+  color: var(--primary);
+  font-size: 0.875rem;
+  vertical-align: super;
+  font-style: italic;
+  margin: 0;
+  padding: 0;
+}
+
+.qmark1{
+  transform: rotate(180deg);
+}
+
+.quote-author{
+  color: var(--primary);
+  margin: -0.875rem;
 }
