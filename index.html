@@ -22,37 +22,111 @@
       <div class="today">
         <h2>Today</h2>
       </div>
-
-      <div class="weather">
-        <div class="weather-header">
-          <i class="weather-icon material-icons">wb_sunny</i>
-          <div class="weather-heading">
-            <h4 class="location"><span class="city">Malmo</span>, <span class="country">Sweden</span></h4>
-            <p class="last-refreshed">Just now</p>
+      <div class="card">
+        <div class="weather">
+          <div class="weather-header">
+            <i class="weather-icon material-icons">wb_sunny</i>
+            <div class="weather-heading">
+              <h4 class="location"><span class="city">Malmo</span>, <span class="country">Sweden</span></h4>
+              <p class="last-refreshed">Just now</p>
+            </div>
+            <i class="refresh-icon material-icons">refresh</i>
           </div>
-          <i class="refresh-icon material-icons">refresh</i>
+          <div class="weather-display">
+            <h3><span class="degrees">14°</span></h3>
+            <p class="description">Partially Cloudy</p>
+          </div>
+          <img src="resources/img/skyline.svg" alt="" class="weather-background" draggable="false">
         </div>
-        <div class="weather-display">
-          <h3><span class="degrees">14°</span></h3>
-          <p class="description">Partially Cloudy</p>
+
+        <div class="time">
+          <div class="time-header">
+            <i class="time-icon material-icons">access_time</i>
+            <div class="time-heading">
+              <h4 class="date">25th February</h4>
+              <p class="day">Monday, Week 8</p>
+            </div>
+          </div>
+          <div class="time-display">
+            <h3 class="thetime">14:30</h3>
+            <p class="advice" >Use Effectively</p>
+          </div>
+          <img src="resources/img/tree.svg" alt="" class="time-background" draggable="false">
         </div>
-        <img src="resources/img/skyline.svg" alt="" class="weather-background" draggable="false">
       </div>
 
-      <div class="time">
-        <div class="time-header">
-          <i class="time-icon material-icons">access_time</i>
-          <div class="time-heading">
-            <h4 class="date">25th February</h4>
-            <p class="day">Monday, Week 8</p>
-          </div>
+<!-- NEWS SECTION -->
+
+<div class="news">
+
+  <div class="article">
+    <div class="info">
+      <p class="author">Christine Burroni</p>
+      <h3 class="headline">Brad Pitt and Angeline Jolie are officially exes! just checking if the headline is too long</h3>
+      <p class="oneliner">The former married couple filed a judment on friday that "restored their single status".</p>
+      <a href="#" class="source">Read Article <i class="material-icons">launch</i></a>
+    </div>
+    <div class="photo">
+      <img class="article-photo" src="https://unsplash.it/1920/1080">
+    </div>
+  </div>
+
+  <div class="article">
+    <div class="info">
+      <p class="author">Amanda-h</p>
+      <h3 class="headline">What last name will prince Harry and Meghan...</h3>
+      <p class="oneliner">Prince Harry and Meghan Markle may be choosing their royal baby's first name, but his or her surname is already decided. </p>
+      <a href="#" class="source">Read Article <i class="material-icons">launch</i></a>
+    </div>
+    <div class="photo">
+      <img class="article-photo" src="https://unsplash.it/1920/1080">
+    </div>
+  </div>
+
+  <div class="article">
+    <div class="info">
+      <p class="author">TMZ Staff</p>
+      <h3 class="headline">Brad Pitt and Angeline Jolie are officially exes! just checking if the headline is too long</h3>
+      <p class="oneliner">The former married couple filed a judment on friday that "restored their single status".</p>
+      <a href="#" class="source">Read Article <i class="material-icons">launch</i></a>
+    </div>
+    <div class="photo">
+      <img class="article-photo" src="https://unsplash.it/1920/1080">
+    </div>
+  </div>
+
+</div>
+
+
+<!-- TO-DO LIST SECTION -->
+    <div class="yourday">
+      <h2>Your Day</h2>
+    </div>
+    <div class="todo">
+      <div class="input-container">
+        <div class="textfield-container">
+          <i class="tick material-icons">check</i>
+          <input type="text" autocomplete="off" maxlength="32" placeholder="Add Task!" id="itemname" class="input">
         </div>
-        <div class="time-display">
-          <h3 class="thetime">14:30</h3>
-          <p class="advice" >Use Effectively</p>
-        </div>
-        <img src="resources/img/tree.svg" alt="" class="time-background" draggable="false">
+        <button class="add"><i class="material-icons">add</i></button>
       </div>
+      <div class="itemdisplay">
+        <ul class="list">
+          <li class="item">Do Math Homework!</li>
+          <li class="item">Buy Milk!</li>
+          <li class="item checked">Still haven't bought milk</li>
+          <li class="item checked">Finish Version 3</li>
+          <li class="item">Do Math Homework!</li>
+          <li class="item">Buy Milk!</li>
+          <li class="item checked">Still haven't bought milk</li>
+          <li class="item checked">Finish Version 3</li>
+          <li class="item">Do Math Homework!</li>
+          <li class="item">Buy Milk!</li>
+          <li class="item checked">Still haven't bought milk</li>
+          <li class="item checked">Finish Version 3</li>
+        </ul>
+      </div>
+    </div>
   </div>
 </body>
 </html>

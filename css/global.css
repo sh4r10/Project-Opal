@@ -1,6 +1,13 @@
 :root{
-  --highlight: #66bb6a;
+  --primary: #66bb6a;
   --secondary: #bdbdbd;
+  --foreground: #fff;
+  --secondary-text: #484848;
+
+  /*ARTWORK COLORS Dark to light*/
+  --color1: #FEFEFE;
+  --color2: #EEEEEE;
+  --color3: #F5F5F5;
 }
 
 *{
@@ -8,7 +15,6 @@
   margin: 0;
   padding: 0;
   font-family: "Roboto", sans-serif;
-  transition: .2s;
 }
 
 body, html{
@@ -17,7 +23,6 @@ body, html{
 
 :root{
   font-size: 16px;
-  transition: .2s;
 }
 
 body{
@@ -29,20 +34,19 @@ body{
 .grid-container{
   display: grid;
   height: 100%;
-  grid-template-columns: 1fr 1fr 0.5fr 1fr 0.5fr;
+  grid-template-columns: 2fr 0.5fr 1fr 0.5fr;
   grid-template-rows: 1fr 1fr 2fr 2fr 2fr 0.5fr;
-  grid-template-areas: "header header header  . ."
-                        "today today . yday ."
-                        "weather time . todo ."
-                        "news news . todo ."
-                        "news news . todo ."
-                        ". quote quote . .";
+  grid-template-areas: "header header header ."
+                        "today yday yday ."
+                        "card todo todo ."
+                        "news todo todo ."
+                        "news todo todo ."
+                        ". quote quote .";
 
 }
 
-@media only screen and (max-width: 769px){
+@media only screen and (max-width: 1366px){
   :root{
     font-size: 12px;
-    transition: .2s;
   }
 }

@@ -35,15 +35,20 @@
   font-weight: 300;
 }
 
+.card{
+  grid-area: card;
+  position relative;
+}
+
 .weather{
-  grid-area: weather;
   width: 20rem;
   height: 10rem;
   margin-left: 8.5rem;
-  background: #fff;
+  background: var(--foreground);
   border-radius: 4px;
   box-shadow: 1px 1px 5px rgba(0,0,0,0.16);
   position: relative;
+  float: left;
 }
 
 .weather-background{
@@ -60,7 +65,7 @@
 }
 
 .weather-icon{
-  color: var(--highlight);
+  color: var(--primary);
   font-size: 2rem;
 }
 
@@ -103,14 +108,14 @@
 }
 
 .time{
-  grid-area: time;
   width: 20rem;
   height: 10rem;
-  margin-left: 1rem;
-  background: #fff;
+  margin-left: 2rem;
+  background: var(--foreground);
   border-radius: 4px;
   box-shadow: 1px 1px 5px rgba(0,0,0,0.16);
   position: relative;
+  float: left;
 }
 
 .time-background{
@@ -148,7 +153,7 @@
 }
 
 .time-icon{
-  color: var(--highlight);
+  color: var(--primary);
   font-size: 2rem;
 }
 
@@ -158,4 +163,233 @@
 
 .time .day{
   font-size: 0.8rem;
+}
+
+/*  END OF TODAY SECTION */
+
+/* TO-DO LIST */
+
+.yourday{
+  grid-area: yday;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-left: 2rem;
+}
+
+.yourday h2{
+  font-size: 2.5em;
+  font-weight: 300;
+}
+
+.todo{
+  grid-area: todo;
+  margin-left: 2rem;
+}
+
+.input{
+  height: 2.5rem;
+  width: 25rem;
+  border: none;
+  border-radius: 4px 30px 30px 4px;
+  box-shadow: 1px 1px 5px rgba(0,0,0,0.16);
+  padding: 0.1rem 2.6rem 0.1rem 2.6rem;
+  outline: none;
+  margin-left: -2rem;
+}
+
+.textfield-container{
+  display: flex;
+  align-items: center;
+  margin-left: 0.5rem;
+}
+
+.textfield-container .tick{
+  font-size: 1.5rem;
+  z-index: 99;
+  color: var(--primary);
+}
+
+.input-container{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.add{
+  height: 2.5rem;
+  width: 2.5rem;
+  background: var(--primary);
+  border: none;
+  margin-left: -2.5rem;
+  z-index: 99;
+  border-radius: 30px;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  box-shadow: -3px 0 6px rgba(0,0,0,0.16);
+}
+
+.add i{
+  font-size: 1.5rem;
+  color: var(--foreground);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.itemdisplay{
+  height: 20rem;
+  width: 24rem;
+  overflow-y: scroll;
+  transition: .2s;
+}
+
+.itemdisplay::-webkit-scrollbar{
+  width: 0.4rem;
+  border-radius: 30px;
+  transition: .2s;
+}
+
+.itemdisplay::-webkit-scrollbar-track{
+  background: #fafafa;
+  height: 20rem;
+  margin-top: 1rem;
+  transition: .2s;
+}
+
+::-webkit-scrollbar-thumb{
+  background: var(--primary);
+  border-radius: 30px;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.itemdisplay ul{
+  list-style-type: none;
+}
+
+.item{
+  margin-top: 1rem;
+  width: 22rem;
+  background: var(--foreground);
+  padding: 0.8rem 1rem;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.10);
+  font-size: 0.875rem;
+  cursor: pointer;
+  /* make the list items unselectable */
+   -webkit-user-select: none;
+   -moz-user-select: none;
+   -ms-user-select: none;
+   user-select: none;
+}
+
+.item:first-child{
+  margin-top: 0;
+}
+
+.item:hover{
+  box-shadow: 2px 3px 6px rgba(0,0,0,0.16);
+}
+
+.item.checked{
+  background: var(--primary);
+  color: var(--foreground);
+  text-decoration: line-through;
+}
+
+/* END OF TO-DO */
+
+.news{
+  grid-area: news;
+  margin-top: -2rem;
+  margin-left: 8.5rem;
+  width: 42rem;
+  height: 27rem;
+  position: relative;
+  overflow: scroll;
+  transition: 0.2s;
+  border-radius: 4px;
+}
+
+.news::-webkit-scrollbar{
+  display: none;
+}
+
+.article{
+  width: 100%;
+  border-radius: 4px;
+  height: 10rem;
+  background: var(--foreground);
+  padding: 0rem 0 0 1rem;
+  box-shadow: 1px 1px 5px rgba(0,0,0,0.16);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  margin-top: 2rem;
+}
+
+.article:first-child{
+  margin-top: 0;
+}
+
+.author{
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.25rem;
+  font-weight: 700;
+  margin-left: 0.2rem;
+}
+
+.headline{
+  font-size: 1.25rem;
+  font-weight: 400;
+  margin-top: 0.5rem;
+}
+
+.oneliner{
+  font-size: 0.875rem;
+  color: var(--secondary-text);
+  margin-top: 0.5rem;
+  width: 96%;
+}
+
+.photo{
+  display: inline-block;
+  width: 15rem;
+  height: 100%;
+  background: #eee;
+  border-radius: 0 4px 4px 0;
+  box-shadow: 1px 1px 5px rgba(0,0,0,0.16);
+}
+
+.article-photo{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 0 4px 4px 0;
+  box-shadow: 1px 1px 5px rgba(0,0,0,0.16);
+}
+
+.source{
+  color: var(--primary);
+  text-decoration: none;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  margin-top: 0.5rem;
+  transition: .2s;
+}
+
+.source:hover{
+  color: #338a3e;
+}
+
+.source i{
+  font-size: 1rem;
+  margin-left: 0.1rem;
 }
