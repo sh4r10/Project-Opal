@@ -1,12 +1,3 @@
-:root{
-  --primary: #66bb6a;
-  --secondary: #bdbdbd;
-  --foreground: #fff;
-  --primary-text: #000;
-  --secondary-text: #484848;
-  /*ARTWORK COLORS Dark to light*/
-}
-
 *{
   box-sizing: border-box;
   margin: 0;
@@ -24,9 +15,10 @@ body, html{
 }
 
 body{
-  background: #fafafa;
+  background: var(--background);
   color: #282828;
   font-family: "Roboto", sans-serif;
+  overflow: hidden;
 }
 
 .grid-container{

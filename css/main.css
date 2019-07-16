@@ -1,3 +1,91 @@
+.overlay{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255,255,255,0.7);
+  z-index: 4;
+  display: none;
+  transition: .2s;
+}
+
+.aword{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 43rem;
+  background: var(--background);
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.16);
+  z-index: 5;
+  padding: 2rem;
+  display: none;
+  transition: .2s;
+}
+
+.aword h1{
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+.aword .card{
+  margin-left: 1rem;
+  width: 9rem;
+  color: var(--foreground);
+  box-shadow: 1px 1px 5px rgba(0,0,0,0.16);
+  float: left;
+  padding: 0.75rem;
+  margin-top: 1rem;
+}
+
+.aword .card:first-child{
+  margin-left: 0;
+}
+
+.aword .card .names{
+  font-size: 1rem;
+  font-weight: 400;
+  width: 100%;
+  text-align: center;
+}
+
+.aword .card .links{
+  margin-top: 0.25rem;
+  padding: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.aword .card .links a{
+  font-size: 1.35rem;
+  margin-left: 0.5rem;
+}
+
+.aword .card .links a:first-child{
+  margin-left: 0;
+}
+
+.insta{
+  color: #833AB4;
+}
+
+.youtube{
+  color: #ff0000;
+}
+
+.steam{
+  color: #2A475E;
+}
+
+.fb{
+  color: #3b5998;
+}
+
 .header-container{
   grid-area: header;
   margin-left: 3rem;
@@ -91,7 +179,7 @@
 }
 
 .weather-display{
-  z-index: 99;
+  z-index: 3;
   position: absolute;
   margin-top: 1rem;
   width: 100%;
@@ -125,7 +213,7 @@
 }
 
 .time-display{
-  z-index: 99;
+  z-index: 3;
   position: absolute;
   margin-top: 1rem;
   width: 100%;
@@ -174,7 +262,7 @@
   width: 100%;
   display: flex;
   align-items: center;
-  margin-left: 2rem;
+  margin-left: 5rem;
 }
 
 .yourday h2{
@@ -184,7 +272,7 @@
 
 .todo{
   grid-area: todo;
-  margin-left: 2rem;
+  margin-left: 5rem;
 }
 
 .input{
@@ -206,7 +294,7 @@
 
 .textfield-container .tick{
   font-size: 1.5rem;
-  z-index: 99;
+  z-index: 3;
   color: var(--primary);
 }
 
@@ -223,7 +311,7 @@
   background: var(--primary);
   border: none;
   margin-left: -2.5rem;
-  z-index: 99;
+  z-index: 3;
   border-radius: 30px;
   outline: none;
   cursor: pointer;
@@ -256,7 +344,6 @@
 .itemdisplay::-webkit-scrollbar-track{
   background: #fafafa;
   height: 20rem;
-  margin-top: 1rem;
   transition: .2s;
 }
 
@@ -423,4 +510,18 @@
 .quote-author{
   color: var(--primary);
   margin: -0.875rem;
+}
+
+.info-btn{
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+.info-btn i{
+  color: var(--primary);
+  font-size: 2rem;
+  cursor: pointer;
 }

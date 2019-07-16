@@ -8,15 +8,58 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.css">
+  <script src="https://kit.fontawesome.com/68e6c1f741.js"></script>
 
+  <link rel="stylesheet" href="css/light.css">
   <link rel="stylesheet" href="css/global.css">
   <link rel="stylesheet" href="css/main.css">
   <title>Project Opal</title>
 </head>
 <body>
+  <div class="overlay"></div>
+
+  <div class="aword">
+    <h1>A word from the developer!</h1>
+    <p>I would like to take a moment to thank my friends who have encouraged, forced, pressured and blackmailed me to finish this version of project opal. These include Ivan Petrov,
+    who has not only been a consistent user since the very first day but also has pushed me to release a new version on several occasions, also included are Luiz Felipe Ferraire Vellozo, Emilis Augutis (gutisboy) and Edgar Sjöberg
+  who banded together like pieces of shit and created a Project Opal counter-strike team to pressure me into releasing a new version. Thank you guys for sticking with me on this journey. Below you will find links to their social medias, shwow them some love.</p>
+  <div class="card-container">
+    <div class="card">
+      <h3 class="names">Ivan Petrov</h3>
+      <div class="links">
+        <a href="https://www.youtube.com/user/RealPetrovich/featured" target="_blank"><i class="fab fa-youtube youtube"></i></a>
+        <a href="https://steamcommunity.com/id/RealPetrovich" target="_blank"><i class="fab fa-steam steam"></i></a>
+        <a href="https://www.instagram.com/petrovichplay/" target="_blank"><i class="fab fa-instagram insta"></i></a>
+      </div>
+    </div>
+    <div class="card">
+      <h3 class="names">Luiz Felipe</h3>
+      <div class="links">
+        <a href="https://www.facebook.com/luizfelipe.vellozo.3" target="_blank"><i class="fab fa-facebook fb"></i></a>
+        <a href="https://steamcommunity.com/profiles/76561198113633184" target="_blank"><i class="fab fa-steam steam"></i></a>
+        <a href="https://www.instagram.com/luizfelipevellozo/" target="_blank"><i class="fab fa-instagram insta"></i></a>
+      </div></div>
+    <div class="card">
+      <h3 class="names">Emilis Augutis</h3>
+      <div class="links">
+        <a href="https://www.youtube.com/channel/UCayimlYkXoji2mZTQwKRlQg" target="_blank"><i class="fab fa-youtube youtube"></i></a>
+        <a href="https://steamcommunity.com/id/toblerjuan" target="_blank"><i class="fab fa-steam steam"></i></a>
+        <a href="https://www.instagram.com/emilis_augutis/" target="_blank"><i class="fab fa-instagram insta"></i></a>
+      </div></div>
+    <div class="card">
+      <h3 class="names">Edgar Sjöberg</h3>
+      <div class="links">
+        <a href="https://www.facebook.com/edgar.sjoberg.3" target="_blank"><i class="fab fa-facebook fb"></i></a>
+        <a href="https://steamcommunity.com/id/Bopperman" target="_blank"><i class="fab fa-steam steam"></i></a>
+        <a href="https://www.instagram.com/bopperman_/" target="_blank"><i class="fab fa-instagram insta"></i></a>
+      </div>
+    </div>
+  </div>
+  </div>
+
   <div class="grid-container">
       <div class="header-container">
-        <img class="logo" src="resources/img/logo.svg" draggable="false">
+        <img class="logo" src="img/logo.svg" draggable="false">
         <h1 class="title">Project Opal</h1>
       </div>
       <div class="today">
@@ -36,7 +79,7 @@
             <h3><span class="degrees">14°</span></h3>
             <p class="description">Partially Cloudy</p>
           </div>
-          <img src="resources/img/skyline.svg" alt="" class="weather-background" draggable="false">
+          <img src="img/skyline.svg" alt="" class="weather-background" draggable="false">
         </div>
 
         <div class="time">
@@ -51,7 +94,7 @@
             <h3 class="thetime">14:30</h3>
             <p class="advice" >Use Effectively</p>
           </div>
-          <img src="resources/img/tree.svg" alt="" class="time-background" draggable="false">
+          <img src="img/tree.svg" alt="" class="time-background" draggable="false">
         </div>
       </div>
 
@@ -132,5 +175,9 @@
       <p class="quote-text"><i class="material-icons qmark1">format_quotes</i>A man can be destroyed but not defeated <i class="material-icons qmark2">format_quotes</i><span class="quote-author">- Ernest Hemingway</span></p>
     </div>
   </div>
+  <div class="info-btn">
+    <i class="material-icons">info</i>
+  </div>
+  <script src="js/main.js"></script>
 </body>
 </html>
