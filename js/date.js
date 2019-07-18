@@ -5,8 +5,11 @@ function setTime(){
   var minutes = date.getMinutes()
   if(minutes < 10){
     minutes = "0"+minutes;
+    $(".thetime").html(hours+":"+minutes);
   }
-  else{$(".thetime").html(hours+":"+minutes);}
+  else{
+    $(".thetime").html(hours+":"+minutes);
+  }
 }
 
 function setDate(){
@@ -36,6 +39,7 @@ Date.prototype.getWeek = function() {
 function getOrdinalNum(n) {
   return n + (n > 0 ? ['th', 'st', 'nd', 'rd'][(n > 3 && n < 21) || n % 10 > 3 ? 0 : n % 10] : '');
 }
-setTime();
+setTime()
+var date = new Date();
 setInterval(setTime, 999);
 setDate();

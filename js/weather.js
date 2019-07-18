@@ -60,6 +60,7 @@ $(document).ready(function () {
 		}
 	}
 	function displayWeather() {
+		$(".degrees").html("<i class='material-icons'>autorenew</i>");	
 		genIcon(localStorage.getItem("description"));
 		$(".description").html(localStorage.getItem("description"));
 
@@ -79,7 +80,7 @@ $(document).ready(function () {
 	}
 	function showTime() {
 		setTimeout(function () {
-			$(".last-refreshed").html("Last updated at " + time);
+			$(".last-refreshed").html("Last updated at " + localStorage.getItem("time"));
 		}, 120000);
 	}
 	function refresh() {
@@ -92,6 +93,9 @@ $(document).ready(function () {
 		console.log(localStorage.refreshed)
 		today = new Date();
 		newtime = today.getHours() + ":"+today.getMinutes();
+		if(localStorage.getItem("time") !== newtime){
+			localStorage.refreshed = 0;
+		}
 
 		if (localStorage.refreshed < 2) {
 			console.log("getting new weather");
@@ -99,9 +103,6 @@ $(document).ready(function () {
 		} else {
 			console.log("getting old weather");
 			displayWeather();
-			if(localStorage.getItem("time") !== newtime){
-				localStorage.refreshed = 0;
-			}
 		}
 	}
 
