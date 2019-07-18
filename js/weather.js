@@ -1,15 +1,15 @@
 // On window load
-$(document).ready(function() {
+$(document).ready(function () {
 
-showWeather();
-var btn = $(".refresh-icon");
-btn.on("click", showWeather);
+	refresh();
+	var btn = $(".refresh-icon");
+	btn.on("click", refresh);
 
-function showWeather(){
+	function showWeather() {
 		$(".degrees").html("<i class='material-icons'>autorenew</i>");
 		$(".description").html("");
 		if (navigator.geolocation) {
-			navigator.geolocation.getCurrentPosition(function(position) {
+			navigator.geolocation.getCurrentPosition(function (position) {
 				var lat = position.coords.latitude;
 				var lon = position.coords.longitude;
 				getWeather(lat, lon);
@@ -19,64 +19,90 @@ function showWeather(){
 		}
 
 		function getWeather(lat, lon) {
-			WeatherAPI = "https://fcc-weather-api.glitch.me/api/current?lat=" + lat + "&lon=" + lon;
+			var api = "1dd9580ced50ad6d3e08ff663cd74791";
+			WeatherAPI = "https://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" + lon + "&APPID=" + api + "&units=metric";
 
-			$.getJSON(WeatherAPI, function(data) {
+			$.getJSON(WeatherAPI, function (data) {
 
-				today = new Date();
-				time = today.getHours() + ":"+today.getMinutes();
+				var today = new Date();
+				var time = today.getHours() + ":" + today.getMinutes();
+				localStorage.setItem("time",time);
 
 				var description = data.weather[0].main;
-				var temp = data.main.temp;
+				var temp = Math.round(data.main.temp);
 				var city = data.name;
 				var country = countryName(data.sys.country);
-				var tempR = Math.round(temp);
 
-				if(data.name == "Shuzenji"){
-					console.log(data.name);
-					getWeather();
-				}
 
-				genIcon(description);
-				$(".description").html(description);
+				localStorage.setItem("description", description);
+				localStorage.setItem("temp", temp);
+				localStorage.setItem("city", city);
+				localStorage.setItem("country", country);
 
-				function genIcon(con) {
-					desc = con.toLowerCase();
-					if (desc !== "clear") {
-						$(".weather-icon").html("wb_cloudy");
-					} else {
-						$(".weather-icon").html("wb_sunny");
-					}
-				}
-
-				function countryName(code) {
-					var codes = ["SE", "PK"];
-					var countries = ["Sweden", "Pakistan"];
-					var found = false;
-
-					for (i = 0; i < codes.length; i++) {
-						if (code == codes[i]) {
-							return countries[i];
-							found = true;
-						}
-					}
-					if (!found) {
-						return code;
-					}
-				}
-
-				$(".location").html(city + ", " + country);
-				$(".degrees").html(tempR + "° ");
-				$(".last-refreshed").html("Just now");
-				showTime();
-
-				function showTime(){
-					setTimeout(function(){
-						$(".last-refreshed").html("Last updated at "+time);
-					}, 120000);
-				}
-
+				displayWeather();
 			});
 		}
+
+		function countryName(code) {
+			var codes = ["SE", "PK"];
+			var countries = ["Sweden", "Pakistan"];
+			var found = false;
+
+			for (i = 0; i < codes.length; i++) {
+				if (code == codes[i]) {
+					return countries[i];
+					found = true;
+				}
+			}
+			if (!found) {
+				return code;
+			}
+		}
 	}
+	function displayWeather() {
+		genIcon(localStorage.getItem("description"));
+		$(".description").html(localStorage.getItem("description"));
+
+		function genIcon(con) {
+			desc = con.toLowerCase();
+			if (desc !== "clear") {
+				$(".weather-icon").html("wb_cloudy");
+			} else {
+				$(".weather-icon").html("wb_sunny");
+			}
+		}
+
+		$(".location").html(localStorage.getItem("city") + ", " + localStorage.getItem("country"));
+		$(".degrees").html(localStorage.getItem("temp") + "° ");
+		$(".last-refreshed").html("Just now");
+		showTime();
+	}
+	function showTime() {
+		setTimeout(function () {
+			$(".last-refreshed").html("Last updated at " + time);
+		}, 120000);
+	}
+	function refresh() {
+
+		if (localStorage.refreshed) {
+			localStorage.refreshed = Number(localStorage.refreshed) + 1;
+		} else {
+			localStorage.refreshed = 1;
+		}
+		console.log(localStorage.refreshed)
+		today = new Date();
+		newtime = today.getHours() + ":"+today.getMinutes();
+
+		if (localStorage.refreshed < 2) {
+			console.log("getting new weather");
+			showWeather();
+		} else {
+			console.log("getting old weather");
+			displayWeather();
+			if(localStorage.getItem("time") !== newtime){
+				localStorage.refreshed = 0;
+			}
+		}
+	}
+
 });
