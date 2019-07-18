@@ -1,6 +1,7 @@
 // On window load
 $(document).ready(function() {
 
+showWeather();
 var btn = $(".refresh-icon");
 btn.on("click", showWeather);
 
@@ -30,6 +31,11 @@ function showWeather(){
 				var city = data.name;
 				var country = countryName(data.sys.country);
 				var tempR = Math.round(temp);
+
+				if(data.name == "Shuzenji"){
+					console.log(data.name);
+					getWeather();
+				}
 
 				genIcon(description);
 				$(".description").html(description);
@@ -73,5 +79,4 @@ function showWeather(){
 			});
 		}
 	}
-	showWeather();
 });

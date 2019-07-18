@@ -3,7 +3,10 @@ function setTime(){
   var date = new Date()
   var hours = date.getHours();
   var minutes = date.getMinutes()
-  $(".thetime").html(hours+":"+minutes);
+  if(minutes < 10){
+    minutes = "0"+minutes;
+  }
+  else{$(".thetime").html(hours+":"+minutes);}
 }
 
 function setDate(){
