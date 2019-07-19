@@ -22,7 +22,7 @@
     <h1>A word from the developer!</h1>
     <p>I would like to take a moment to thank my friends who have encouraged, forced, pressured and blackmailed me to finish this version of project opal. These include Ivan Petrov,
     who has not only been a consistent user since the very first day but also has pushed me to release a new version on several occasions, also included are Luiz Felipe Ferreire Vellozo, Emilis Augutis (gutisboy) and Edgar Sjöberg
-  who banded together like pieces of shit and created a Project Opal counter-strike team to pressure me into releasing a new version. Thank you guys for sticking with me on this journey. Below you will find links to their social medias, show them some love.</p>
+  who banded together and created a Project Opal counter-strike team to pressure me into releasing a new version. Thank you guys for sticking with me on this journey. Below you will find links to their social medias, show them some love.</p>
   <div class="card-container">
     <div class="card">
       <h3 class="names">Ivan Petrov</h3>
@@ -146,27 +146,17 @@
       <h2>Your Day</h2>
     </div>
     <div class="todo">
+    <form id="input-form">
       <div class="input-container">
         <div class="textfield-container">
           <i class="tick material-icons">check</i>
-          <input type="text" autocomplete="off" maxlength="32" placeholder="Add Task!" id="itemname" class="input">
+          <input type="text" autocomplete="off" maxlength="32" placeholder="Add Task!" id="itemname" class="input" required>
         </div>
-        <button class="add"><i class="material-icons">add</i></button>
+        <button class="add" type="submit"><i class="material-icons">add</i></button>
       </div>
+    </form>
       <div class="itemdisplay">
         <ul class="list">
-          <li class="item">Do Math Homework!</li>
-          <li class="item">Buy Milk!</li>
-          <li class="item checked">Still haven't bought milk</li>
-          <li class="item checked">Finish Version 3</li>
-          <li class="item">Do Math Homework!</li>
-          <li class="item">Buy Milk!</li>
-          <li class="item checked">Still haven't bought milk</li>
-          <li class="item checked">Finish Version 3</li>
-          <li class="item">Do Math Homework!</li>
-          <li class="item">Buy Milk!</li>
-          <li class="item checked">Still haven't bought milk</li>
-          <li class="item checked">Finish Version 3</li>
         </ul>
       </div>
     </div>
@@ -179,8 +169,9 @@
     <i class="material-icons">info</i>
   </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="js/todo.js"></script>
   <script src="js/date.js"></script>
   <script src="js/main.js"></script>
-  <script src="js/weather.js"></script>
+  <!-- <script src="js/weather.js"></script> -->
 </body>
 </html>

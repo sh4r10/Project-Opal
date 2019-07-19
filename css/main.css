@@ -369,6 +369,7 @@
   width: 24rem;
   overflow-y: scroll;
   transition: .2s;
+  scroll-behavior: smooth;
 }
 
 .itemdisplay::-webkit-scrollbar{
@@ -395,19 +396,41 @@
 }
 
 .item{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
   margin-top: 1rem;
   width: 22rem;
+  height: 2.5rem;
   background: var(--foreground);
   padding: 0.8rem 1rem;
   border-radius: 4px;
   box-shadow: 0 1px 3px rgba(0,0,0,0.10);
   font-size: 0.875rem;
   cursor: pointer;
+  transition: .2s;
   /* make the list items unselectable */
    -webkit-user-select: none;
    -moz-user-select: none;
    -ms-user-select: none;
    user-select: none;
+}
+
+.remove-container i{
+  font-size: 1.25rem;
+  color: var(--alert);
+  transition: .2s;
+  cursor: pointer;
+  padding: 0.5rem 0.25;
+}
+
+.remove-container i:hover{
+  color: var(--alert-hover);
+}
+
+.item.checked i{
+  color: #fff;
 }
 
 .item:first-child{

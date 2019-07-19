@@ -60,7 +60,7 @@ $(document).ready(function () {
 		}
 	}
 	function displayWeather() {
-		$(".degrees").html("<i class='material-icons'>autorenew</i>");	
+		$(".degrees").html("<i class='material-icons'>autorenew</i>");
 		genIcon(localStorage.getItem("description"));
 		$(".description").html(localStorage.getItem("description"));
 

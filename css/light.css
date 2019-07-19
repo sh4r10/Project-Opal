@@ -5,6 +5,8 @@
   --background: #fafafa;
   --primary-text: #000;
   --secondary-text: #484848;
+  --alert: #e53935;
+  --alert-hover: #c62828;
 }
 
 .overlay{

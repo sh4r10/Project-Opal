@@ -5,11 +5,11 @@ function setTime(){
   var minutes = date.getMinutes()
   if(minutes < 10){
     minutes = "0"+minutes;
-    $(".thetime").html(hours+":"+minutes);
   }
-  else{
-    $(".thetime").html(hours+":"+minutes);
+  else if(hours < 10){
+    hours = "0"+hours;
   }
+  $(".thetime").html(hours+":"+minutes);
 }
 
 function setDate(){
