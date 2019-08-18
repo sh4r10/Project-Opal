@@ -26,7 +26,7 @@ $(document).ready(function () {
 
 				var today = new Date();
 				var time = today.getHours() + ":" + today.getMinutes();
-				localStorage.setItem("time",time);
+				localStorage.setItem("minutes",today.getMinutes());
 
 				var description = data.weather[0].main;
 				var temp = Math.round(data.main.temp);
@@ -91,9 +91,10 @@ $(document).ready(function () {
 			localStorage.refreshed = 1;
 		}
 		console.log(localStorage.refreshed)
-		today = new Date();
-		newtime = today.getHours() + ":"+today.getMinutes();
-		if(localStorage.getItem("time") !== newtime){
+		newtime = new Date();
+		timeDiff = Math.abs((localStorage.getItem("minutes")/(1/6)) - (newtime.getMinutes()/(1/6)));
+		console.log(timeDiff);
+		if(timeDiff > 60){
 			localStorage.refreshed = 0;
 		}
 

@@ -7,7 +7,15 @@
   --secondary-text: #484848;
   --alert: #e53935;
   --alert-hover: #c62828;
+
+  --color1: #FEFEFE;
+  --color2: #EEEEEE;
+  --color3: #F5F5F5;
 }
+
+.st0{fill: var(--color1);}
+.st1{fill: var(--color2);}
+.st2{fill:var(--color3);}
 
 .overlay{
   background-color: rgba(255,255,255,0.8);
