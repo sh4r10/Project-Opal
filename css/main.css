@@ -209,15 +209,14 @@
   height: auto;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 }
 
-.degrees{
+.weather-display h3{
+  text-align: center;
   font-size: 2rem;
   font-weight: 400;
   width: 100%;
-  text-align: center;
 }
 
 .degrees i{
@@ -512,7 +511,7 @@
   box-shadow: 1px 1px 5px rgba(0,0,0,0.16);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: contain;  
+  background-size: contain;
 }
 
 /* .article-photo{
