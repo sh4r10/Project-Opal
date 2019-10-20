@@ -968,7 +968,8 @@
 
 <!-- NEWS SECTION -->
 
-<div class="news" id="news-container">
+<div class="news">
+
   <!-- <div class="article">
     <div class="info">
       <p class="author">Christine Burroni</p>
@@ -996,9 +997,24 @@
       <div class="photo" style="background: url({{urlToImage}})">
       </div>
     </div>
+  </div> -->
 
-  {{/each}}
-</script>
+  <script id="news-template" type="text/x-handlebars-template">
+    {{#each articles}}
+    <div class="article">
+      <div class="info">
+        <p class="author">{{authorCheck author}}</p>
+        <h3 class="headline">{{title}}</h3>
+        <p class="oneliner">{{description}}</p>
+        <a href={{data.articles.url}} class="source"></a>
+      </div>
+      <div class="photo">
+        <img class="article-photo" src={{urlToImage}} alt="Article Image">
+      </div>
+    </div>
+    {{/each}}
+  </script>
+</div>
 
 <!-- TO-DO LIST SECTION -->
     <div class="yourday">

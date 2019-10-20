@@ -506,7 +506,6 @@
 .photo{
   width: 15rem;
   height: 100%;
-  background: #eee;
   border-radius: 0 4px 4px 0;
   box-shadow: 1px 1px 5px rgba(0,0,0,0.16);
   background-repeat: no-repeat;
