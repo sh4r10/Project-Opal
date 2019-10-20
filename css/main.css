@@ -209,15 +209,14 @@
   height: auto;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 }
 
-.degrees{
+.weather-display h3{
+  text-align: center;
   font-size: 2rem;
   font-weight: 400;
   width: 100%;
-  text-align: center;
 }
 
 .degrees i{
@@ -368,6 +367,7 @@
   height: 20rem;
   width: 24rem;
   overflow-y: scroll;
+  overflow-x: hidden;
   transition: .2s;
   scroll-behavior: smooth;
 }
@@ -451,10 +451,10 @@
 
 .news{
   grid-area: news;
-  margin-top: -2rem;
   margin-left: 12.5rem;
+  margin-top: 2rem;
   width: 42rem;
-  height: 27rem;
+  margin-bottom: 2rem;
   position: relative;
   overflow: scroll;
   border-radius: 4px;
@@ -504,21 +504,19 @@
 }
 
 .photo{
-  display: inline-block;
   width: 15rem;
   height: 100%;
-  background: #eee;
   border-radius: 0 4px 4px 0;
   box-shadow: 1px 1px 5px rgba(0,0,0,0.16);
 }
 
-.article-photo{
+/* .article-photo{
   height: 100%;
   width: 100%;
   object-fit: cover;
   border-radius: 0 4px 4px 0;
   box-shadow: 1px 1px 5px rgba(0,0,0,0.16);
-}
+} */
 
 .source{
   color: var(--primary);

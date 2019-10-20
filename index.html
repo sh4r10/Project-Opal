@@ -102,7 +102,7 @@
 
 <div class="news">
 
-  <div class="article">
+  <!-- <div class="article">
     <div class="info">
       <p class="author">Christine Burroni</p>
       <h3 class="headline">Brad Pitt and Angeline Jolie are officially exes! just checking if the headline is too long</h3>
@@ -136,10 +136,24 @@
     <div class="photo">
       <img class="article-photo" src="https://unsplash.it/1920/1080">
     </div>
-  </div>
+  </div> -->
 
+  <script id="news-template" type="text/x-handlebars-template">
+    {{#each articles}}
+    <div class="article">
+      <div class="info">
+        <p class="author">{{authorCheck author}}</p>
+        <h3 class="headline">{{title}}</h3>
+        <p class="oneliner">{{description}}</p>
+        <a href={{data.articles.url}} class="source"></a>
+      </div>
+      <div class="photo">
+        <img class="article-photo" src={{urlToImage}} alt="Article Image">
+      </div>
+    </div>
+    {{/each}}
+  </script>
 </div>
-
 
 <!-- TO-DO LIST SECTION -->
     <div class="yourday">
@@ -169,9 +183,11 @@
     <i class="material-icons">info</i>
   </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.4.2/handlebars.min.js"></script>
   <script src="js/todo.js"></script>
   <script src="js/date.js"></script>
   <script src="js/main.js"></script>
   <!-- <script src="js/weather.js"></script> -->
+  <script src="js/news.js"></script>
 </body>
 </html>
