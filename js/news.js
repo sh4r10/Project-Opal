@@ -10,10 +10,37 @@ function handle(data){
     if(a == null){
       return "unknown";
     }
+    else if(a.split("").length > 32){
+      return "unknown";
+    }
     else{
       return a;
     }
   })
+
+  Handlebars.registerHelper("lengthCheck", function(d){
+    if(d.split(" ").length > 20){
+      return d.split(" ").splice(0,20).join(" ") + "...";
+    }
+    else{
+      return d;
+    }
+  });
+
+  Handlebars.registerHelper("headingCheck", function(h){
+
+    if(h.split(" ").length > 12){
+      to = h.split(" ").splice(0, 12).join(" ") + "...";
+      split = to.split("-");
+      splitted = split[0];
+      return split[0];
+    }
+    else{
+      split = h.split("-");
+      splitted = split[0];
+      return splitted;
+    }
+  });
 
   var rawTemplate = document.getElementById("news-template").innerHTML;
   var compiledTemplate = Handlebars.compile(rawTemplate);

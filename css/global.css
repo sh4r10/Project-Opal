@@ -41,9 +41,26 @@ body{
   justify-content: space-around;
 }
 
+.alert{
+  position: absolute;
+  top: 5%;
+  left: 90%;
+  transform: translateX(-50%);
+  width: 20em;
+  background: #eee;
+  border-radius: 6px;
+  text-align: center;
+  padding: 1em;
+  display: none;
+}
+
+.alert .text{
+  color: #fff;
+}
+
 
 @media only screen and (max-width: 1366px){
   :root{
-    font-size: 13px;
+    font-size: 12px;
   }
 }

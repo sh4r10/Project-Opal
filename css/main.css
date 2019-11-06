@@ -342,7 +342,7 @@
 
 .add{
   height: 2.5rem;
-  width: 2.5rem;
+  min-width: 2.5rem;
   background: var(--primary);
   border: none;
   margin-left: -2.5rem;
@@ -422,7 +422,7 @@
   color: var(--alert);
   transition: .2s;
   cursor: pointer;
-  padding: 0.5rem 0.25;
+  padding: 0.5rem 0.25rem;
 }
 
 .remove-container i:hover{
@@ -467,7 +467,7 @@
 .article{
   width: 100%;
   border-radius: 4px;
-  height: 10rem;
+  min-height: 10rem;
   background: var(--foreground);
   padding: 0rem 0 0 1rem;
   box-shadow: 1px 1px 5px rgba(0,0,0,0.16);
@@ -503,14 +503,28 @@
   width: 96%;
 }
 
+.icons i{
+  margin-top: 0.5em;
+  font-size: 1.25em;
+  color: var(--primary);
+}
+
+.icons i:hover{
+  color: #428245;
+}
+
 .photo{
-  width: 15rem;
-  height: 100%;
+  width: 12rem;
+  height: 10rem;
   border-radius: 0 4px 4px 0;
   box-shadow: 1px 1px 5px rgba(0,0,0,0.16);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
+}
+
+.photo img{
+  border-radius: 0 4px 4px 0;
+  min-width: 100%;
+  max-height: 100%;
+  object-fit: fill;
 }
 
 /* .article-photo{
